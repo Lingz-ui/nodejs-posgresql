@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/quotes', quotesRouter);
-app.get('/', (req, res) => {
+app.get('/yuri', (req, res) => {
   let posts = await Booru.search('dan', ['yuri'], { limit: 350, random: false })
   d = posts
   resu = []
